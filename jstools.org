@@ -1,0 +1,61 @@
+Javascript Static Analysis Tools
+
+
+
+* Coding Standard Enforcement
+
+** JSLint
+   It ships with a great default ruleset. JSLint is highly opinionated and this is generally seen as a good thing. Thus there's (intentionally) a limited amount you can do to configure or disable individual rules. But this can make it tough to apply JSLint to legacy code.  
+
+** JSHint
+   JSHint is very similar to JSLint but it is easier/possible to configure or disable all of JSLint's checks via command line options or via a .jshintrc file.
+
+
+* Simple static analysis based on some extensible tools
+** DoctorJS
+   http://doctorjs.org/
+   not avaiable right now?
+
+** PHP CodeSniffer 
+   PHP CodeSniffer with javascript
+   https://gist.github.com/textarcana/3375708#file_js_code_sniffs.md
+
+** pfff
+   parsing, hacky global analysis for callgraphs, highlighter, hacky class analysis, semantic visual feedback in codemap (important function/classes/methods)
+   https://github.com/facebook/pfff
+
+** WALA
+   http://wala.sourceforge.net/wiki/index.php/Tutorial
+   WALA is an open-source program analysis framework that can build static call graphs and control-flow graphs for JavaScript:
+
+* Duplicated Code
+
+** CloneDR
+   detect duplicated code
+   http://www.semanticdesigns.com/Products/Clone/ECMAScriptExample/index.html
+
+** CPD
+   http://pmd.sourceforge.net/  
+
+
+* Not so sure
+** JSure
+   https://github.com/berke/jsure
+
+** JSAnalyse
+   JSAnalyse has just been published on codeplex. It is a tool which analyses the dependencies between javascript files. You can even define the allowed dependencies and JSAnalysis checks whether the defined rules are fulfilled or not. That allows to keep track about the javascript dependencies even in big projects and have a clean architecture.
+   http://jsanalyse.codeplex.com/
+
+** pyv8
+   Python Wrapper for Google V8 Javascript Engine. Potentially, we can customize V8 to collect runtime information.
+
+* Google Closure
+  Closure compiler can be used to detect javascript errors. It also warns you about potential issues such as missing parameters and undeclared or redefined variables. 
+  Complete list of errors and warnings can be found at: https://developers.google.com/closure/compiler/docs/error-ref
+
+  Closure can output ast in .dot format and use Graphviz to visualize call graph.
+
+* Theoretic Works
+** TODO TAJS
+  
+   http://www.brics.dk/TAJS/
